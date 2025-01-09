@@ -1,59 +1,41 @@
-# Dsa210-project-30658
-Spotify weather playlist
+# Correlation Between Weather and Music Listening Habits
 
-## Project Title
-Spotify Weather Playlist Generator
+## Introduction
+This project aimed to explore the relationship between weather conditions and music preferences. By analyzing Spotify listening history alongside historical weather data, the system was designed to categorize listening habits based on weather conditions and test for potential correlations.
 
-## Overview
-The Spotify Weather Playlist Generator combines Spotify listening history with real-time weather data to create personalized playlists based on current weather conditions. By analyzing the weather at the time songs were played, the project categorizes tracks according to weather types (e.g., sunny, rainy) and generates playlists suited to today's weather.
+## Hypothesis Testing
+- **Null Hypothesis (H0):** Weather conditions and music preferences are independent.  
+- **Alternative Hypothesis (H1):** Weather conditions influence music preferences.
 
-The goal is to explore how weather influences music preferences and automate playlist creation tailored to the current mood of the day. This project involves data extraction, analysis, and building a recommendation system using weather and music data.
+A Chi-Square test was conducted, and the results showed no statistically significant relationship between weather conditions and general music preferences, leading to a failure to reject H0. This indicates that music preferences, in general, are not influenced by the weather.
 
-## Dataset
-Source 1: Spotify listening history data (extracted from your Spotify account).
-Includes timestamps, track names, artist names, and other metadata.
+## Weather-Based Playlists
+Even though no significant correlation was found between weather and overall music preferences, the system generates personalized playlists based on past listening habits under specific weather conditions. These playlists serve as a unique way to rediscover and enjoy music associated with different weather patterns.
 
-Source 2: Weather API (such as OpenWeatherMap or Weatherstack).
-Provides current weather conditions (temperature, weather type, time of day) based on location and time.
+### Example Weather-Specific Playlists:
+- **Rainy Days Playlist:** Tracks listened to on rainy days.  
+- **Clear Sky Playlist:** Songs played on days with clear weather.  
+- **Partially Cloudy Playlist:** Music enjoyed on partly cloudy days.
 
-## Project Idea
-The goal of this project is to combine personal Spotify listening history with real-time weather data to:
+## Data Sources
+- **Spotify Listening Data:** Extracted from user listening history on Spotify.  
+- **Weather Data:** Historical weather information sourced from Visual Crossing, providing daily weather conditions for the relevant dates.
 
-1. **Categorize songs based on weather conditions during specific listening times**
-1. **Create customized playlists tailored to current weather conditions.**
-1. **Provide insights into listening habits and their correlation with weather.**
+## Methodology
 
-The system will analyze the weather conditions when songs were played and suggest playlists that align with today’s weather. For example:
-   - On a sunny day, generate an upbeat playlist.
-   - For rainy weather, suggest a mellow, reflective playlist.
+1. **Data Cleaning:**  
+   - Extracted relevant attributes (e.g., track names, timestamps) from Spotify data.  
+   - Cleaned and formatted weather data to ensure compatibility for merging.  
 
-## Project Plan
-1. **Data Extraction**
-  - Use Spotify's data export feature to download listening history.
-  - Set up and connect to a weather API to fetch historical weather data corresponding to timestamps.
-  
-2. **Data Processing**
-  - Match each song’s timestamp to the relevant weather condition.
-  - Categorize songs into weather-based clusters (e.g., sunny, rainy, snowy, etc.).
-  
-3. **Modeling**
-  - Use weather and time data to build a recommendation system that suggests playlists for the current weather.
-     
-4. **Output**
-  - Generate a playlist automatically based on the user’s current location and weather.
-    
-5. **Ongoing Updates**
-  - Update and refine the playlist creation rules based on feedback and performance.
-    
-## Features
- This project will include the following features:
+2. **Data Merging:**  
+   - Merged Spotify listening data with weather data based on the 'date' column to align listening habits with weather conditions.  
 
-- **Automatic Playlist Creation:** Based on current weather conditions (temperature, weather type, etc.), the system will automatically generate a playlist that fits the mood of the day (e.g., upbeat music for sunny weather, relaxing tunes for rainy days).
-  
-- **Mood-Based Categorization:** Songs will be categorized by their mood, tempo, and energy level to match weather conditions more accurately.
+3. **Hypothesis Testing:**  
+   - Created a contingency table to analyze the distribution of songs across different weather categories.  
+   - Performed a Chi-Square test to assess the relationship between weather and music preferences.  
 
-- **Weather-Based Playlist Suggestions:** Playlists will be dynamically adjusted based on the time of day and current weather conditions, offering users a tailored music experience.
-  
-- **Visualization:** Visualize trends in how music preferences change with weather conditions through interactive charts.
-  
-- **Historical Analysis:** Analyze past listening habits to see how weather has influenced song choices over time.
+4. **Playlist Creation:**  
+   - Grouped songs by weather categories to generate weather-specific playlists based on historical listening data.
+
+## Conclusion
+While the analysis confirmed no significant correlation between weather conditions and general music preferences, the system effectively creates personalized weather-based playlists. This feature allows users to enjoy curated music selections that align with their past listening habits under different weather conditions, offering a personalized and engaging listening experience.
