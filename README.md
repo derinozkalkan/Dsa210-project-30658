@@ -36,6 +36,3 @@ Even though no significant correlation was found between weather and overall mus
 
 4. **Playlist Creation:**  
    - Grouped songs by weather categories to generate weather-specific playlists based on historical listening data.
-
-## Conclusion
-While the analysis confirmed no significant correlation between weather conditions and general music preferences, the system effectively creates personalized weather-based playlists. This feature allows users to enjoy curated music selections that align with their past listening habits under different weather conditions, offering a personalized and engaging listening experience.
